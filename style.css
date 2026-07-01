@@ -39,15 +39,19 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Layout Utility --- */
-.navbar, .hero-container, .work-section, .about-container, .footer-container {
+body.modal-open {
+    overflow: hidden;
+}
+
+/* --- Layout Utility (Updated for Tag Alignment) --- */
+.navbar, .hero-container, .work-section, .about-layout-wrapper, .footer-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 4rem;
 }
 
 @media (max-width: 768px) {
-    .navbar, .hero-container, .work-section, .about-container, .footer-container {
+    .navbar, .hero-container, .work-section, .about-layout-wrapper, .footer-container {
         padding: 0 1.5rem;
     }
 }
@@ -202,6 +206,7 @@ body {
 }
 
 .project-image-wrapper {
+    position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
     background-color: var(--bg-secondary);
@@ -215,6 +220,30 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image Reveal Overlay on Hover */
+.view-gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .view-gallery-overlay {
+    opacity: 1;
 }
 
 .project-card:hover .project-img {
@@ -231,9 +260,125 @@ body {
 }
 
 .project-title {
+    display: none; /* Hidden per your request */
     font-size: 1.4rem;
     font-weight: 500;
     font-family: var(--font-serif);
+}
+
+/* --- Gallery Modal (Lightbox) --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.98);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-slide-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s ease;
+}
+
+.modal-caption {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border-top: 1px solid #333333;
+    padding-top: 1rem;
+}
+
+#modal-project-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+}
+
+#modal-counter {
+    color: #888888;
+}
+
+/* Modal UI Buttons */
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 2rem;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+
+.modal-close:hover, .modal-nav:hover {
+    opacity: 1;
+}
+
+.modal-nav.prev { left: 20px; }
+.modal-nav.next { right: 20px; }
+
+@media (max-width: 768px) {
+    .modal-nav { padding: 1rem; font-size: 1.5rem;}
+    .modal-nav.prev { left: 5px; }
+    .modal-nav.next { right: 5px; }
+    .modal-close { top: 15px; right: 20px; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 /* --- About Section --- */
