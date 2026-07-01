@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Director & Senior Designer | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -31,8 +30,8 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-container">
-            <h1 class="hero-title">Hello Shanise!</h1>
-            <p class="hero-subtitle">Senior Graphic Designer specializing in brand strategy, UI/UX systems, and high-impact visual design.</p>
+            <h1 class="hero-title">Hello Shanise!<br> Im Crafting digital experiences & compelling visual identities.</h1>
+            <p class="hero-subtitle">Senior Graphic Designer specializing in print media, tecnical or environmental sign development, BAS graphics and high-impact visual design.</p>
             <a href="#work" class="cta-btn">View Selected Work</a>
         </div>
     </header>
@@ -45,60 +44,83 @@
         
         <div class="portfolio-grid">
             <!-- Project 1 -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-gallery="aether">
                 <div class="project-image-wrapper">
-                    <img src="images/placeholder.png" alt="Brand Identity Concept" class="project-img">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800" alt="Brand Identity Concept" class="project-img">
+                    <div class="view-gallery-overlay">View Gallery</div>
                 </div>
                 <div class="project-info">
-                    <span class="project-category">Brand Identity & Strategy</span>
-                    <h3 class="project-title">Aether Campaign</h3>
+                    <span class="project-category">Editorial & Print Production</span>
+                    <h3 class="project-title">hidden in css</h3>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-gallery="nexus">
                 <div class="project-image-wrapper">
-                    <img src="images/6276.jpg" alt="UI/UX Case Study" class="project-img">
+                    <img src="https://images.unsplash.com/photo-1581291518655-9523c932dedf?q=80&w=800" alt="UI/UX Case Study" class="project-img">
+                    <div class="view-gallery-overlay">View Gallery</div>
                 </div>
                 <div class="project-info">
-                    <span class="project-category">UI/UX Design & Systems</span>
-                    <h3 class="project-title">Nexus Mobile Platform</h3>
+                    <span class="project-category">BUILDING AUTOMATION SYSTEM GRAPHICS</span>
+                    <h3 class="project-title">hidden in csss</h3>
                 </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-gallery="vanguard">
                 <div class="project-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1541462608141-ad4979e408c9?q=80&w=800" alt="Commercial Layout Design" class="project-img">
+                    <div class="view-gallery-overlay">View Gallery</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Editorial & Print Production</span>
-                    <h3 class="project-title">Vanguard Journal</h3>
+                    <h3 class="project-title">hidden in css</h3>
                 </div>
             </div>
 
             <!-- Project 4 -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-gallery="apex">
                 <div class="project-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800" alt="Digital Art Direction" class="project-img">
+                    <div class="view-gallery-overlay">View Gallery</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Art Direction & Asset Design</span>
-                    <h3 class="project-title">Apex Motion Graphics</h3>
+                    <h3 class="project-title">hidden in css</h3>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Dynamic Lightbox Modal for Galleries -->
+    <div id="gallery-modal" class="modal" aria-hidden="true">
+        <button class="modal-close" aria-label="Close gallery">&times;</button>
+        <button class="modal-nav prev" aria-label="Previous image">&#10094;</button>
+        <button class="modal-nav next" aria-label="Next image">&#10095;</button>
+        
+        <div class="modal-content">
+            <div class="modal-slide-container">
+                <img id="modal-img" src="" alt="Gallery Image">
+            </div>
+            <div class="modal-caption">
+                <span id="modal-project-name">Project</span>
+                <span id="modal-counter">1 / 1</span>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="about-section">
+    <div class="about-layout-wrapper"> 
         <div class="section-header">
             <span class="section-tag">02 / THE DESIGNER</span>
         </div>
+        
         <div class="about-container">
             <div class="about-text">
                 <h2>I bridge the gap between pure artistic expression and strategic, user-centered product design.</h2>
-                <p>With over a decade of industry experience, I partner with forward-thinking brands to develop scalable design languages, beautiful typography frameworks, and engaging digital interfaces. My philosophy centers on subtraction — removing noise until only the core message remains.</p>
+                <p>With over a decade of industry experience, I partner with forward-thinking brands to develop scalable design languages, beautiful typography frameworks, and engaging digital interfaces.</p>
             </div>
             <div class="skills-box">
                 <h3>Core Expertise</h3>
@@ -110,13 +132,14 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Footer -->
     <footer id="contact" class="footer">
         <div class="footer-container">
             <h2 class="footer-heading">Let's create something memorable together.</h2>
-            <a href="mailto:your.email@example.com" class="footer-email">hello@yourstudio.com</a>
+            <a href="mailto:hello@yourstudio.com" class="footer-email">hello@yourstudio.com</a>
             
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2026 DESIGN.STUDIO. Built for GitHub Pages.</p>
