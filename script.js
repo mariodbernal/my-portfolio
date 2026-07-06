@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         aether: {
             title: "Aether Campaign",
             images: [
-                "images/print/print_gallery_TCC_1.jpgg",
-                "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=1200",
+                "images/print/print_gallery_TCC_1.jpg",
+                "images/print/print_gallery_TCC_1.jpg",
                 "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200"
             ]
         },
