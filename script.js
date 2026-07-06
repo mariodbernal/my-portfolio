@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nexus: {
             title: "Nexus Mobile Platform",
             images: [
-                "https://images.unsplash.com/photo-1581291518655-9523c932dedf?q=80&w=1200",
+                "images/bas/BAS_hero_home.jpg",
                 "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200"
             ]
         },
