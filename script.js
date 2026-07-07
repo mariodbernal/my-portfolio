@@ -50,37 +50,73 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         nexus: {
-            title: "Nexus Mobile Platform",
+            title: "BAS GRAPHICS",
             images: [
                 {
-                    url: "https://images.unsplash.com/photo-1581291518655-9523c932dedf?q=80&w=1200",
-                    desc: "User journey map and primary dark mode interface layouts."
+                    url: "images/bas/bas_site_home_design6.jpg",
+                    desc: "Custom front-end BAS homepage & navigation integration using J2 Fin, java & WEBS N4 platforms."
                 },
                 {
-                    url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
-                    desc: "Design system dashboard outlining responsive component variables."
+                    url: "images/bas/bas_site_home_design5.jpg",
+                    desc: "Custom BAS graphics using J2 Fin, java & N4 platforms."
+                },
+                {
+                    url: "images/bas/bas_site_home_design4.jpg",
+                    desc: "Custom BAS graphics for a Harrah's Casino located in Council Bluffs, IA."
+                },
+                {
+                    url: "images/bas/bas_site_home_design2.jpg",
+                    desc: "Custom BAS graphics navigation, homepage and equipmet pages for Field Club of Omaha."
+                },
+                {
+                    url: "images/bas/bas_custom_equipment2.jpg",
+                    desc: "Custom multi-state thermostat widgets made for BAS front-end integrations."
+                },
+                {
+                    url: "images/bas/bas_custom_equipment1.jpg",
+                    desc: "Custom multi-state guage widgets for BAS systems."
+                },
+                {
+                    url: "images/bas/bas_dashboard_display1.jpg",
+                    desc: "Custom back up generator dashboard display desiged for Honeywell WEBS N4 platform."
                 }
             ]
         },
         vanguard: {
-            title: "Vanguard Journal",
+            title: "Digital & Web Graphcs",
             images: [
                 {
-                    url: "https://images.unsplash.com/photo-1541462608141-ad4979e408c9?q=80&w=1200",
-                    desc: "Editorial front cover layout emphasizing modern Swiss typography."
+                    url: "images/digital/digital_web_site1.jpg",
+                    desc: "Custom website designed for South Side Barbers & Beauty in Omaha, Nebraska."
                 },
                 {
-                    url: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200",
-                    desc: "Interior page grid setup showing mixed-media text and photo execution."
+                    url: "images/digital/digital_hero_promo_ad1.jpg",
+                    desc: "Mobile hero image for product sales promotion."
                 }
             ]
         },
         apex: {
-            title: "Apex Motion Graphics",
+            title: "More design samples",
             images: [
                 {
-                    url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200",
-                    desc: "Vector storyboards detailing complex keyframe transformations."
+                    url: "images/misc/misc_logo_design3.jpg",
+                    desc: "Custom logo illustration for a catfishing team in Omaha, NE."
+                },
+                {
+                    url: "images/misc/misc_logo_design4.jpg",
+                    desc: "Custom logo rebrand design for pneumatic tool line sold in over 100 retail stores in the US and Mexico."
+                },
+                {
+                    url: "images/misc/misc_logo_design6.jpg",
+                    desc: "Custom logo design for All Safe Homes, a home security company."
+                },
+                {
+                    url: "images/misc/misc_custom_cooler_design1.jpg",
+                    desc: "Can cooler design as part of a branded concert fundraising event."
+                },
+                {
+                    url: "images/misc/misc_custom_cooler_design2.png",
+                    desc: "Can cooler mockup design."
                 }
             ]
         }
