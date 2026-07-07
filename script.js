@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Print advertisement"
                 },
                 {
-                    url: "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=1200",
-                    desc: "Custom typography design and brand style guidelines overview."
+                    url: "images/print/DrakeWhite_ConcertFlyer_Public.jpg",
+                    desc: "Custom concert poster for a company fundraiser."
                 },
                 {
                     url: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200",
