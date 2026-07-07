@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const galleries = {
         aether: {
-            title: "Aether Campaign",
+            title: "Print Design",
             images: [
                 {
-                    url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200",
-                    desc: "Primary visual identity concept exploring minimalist geometric constructs."
+                    url: "images/print/print_gallery_TCC_1.jpg",
+                    desc: "Print advertisement"
                 },
                 {
                     url: "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=1200",
