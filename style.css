@@ -316,14 +316,38 @@ body.modal-open {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 1.5rem;
     color: #ffffff;
     font-size: 0.95rem;
-    font-weight: 400;
-    border-top: 1px solid #333333;
+    border-top: 1px solid #222222;
     padding-top: 1rem;
 }
 
+.modal-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    max-width: 70%;
+}
+
+#modal-project-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+#modal-img-description {
+    color: #999999;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+#modal-counter {
+    color: #666666;
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+}
 #modal-project-name {
     font-family: var(--font-serif);
     font-size: 1.1rem;
