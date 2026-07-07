@@ -16,8 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Custom concert poster for a company fundraiser."
                 },
                 {
-                    url: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200",
-                    desc: "Digital outdoor advertising mockup displaying high-contrast grid systems."
+                    url: "images/print/print_gallery_Company_vintage_poster.jpg",
+                    desc: "Vintage poster created for a 20 year anniversary."
+                },
+                {
+                    url: "images/print/print_gallery_company_brochure1.jpg",
+                    desc: "Company brochure layout - interior page"
+                },
+                {
+                    url: "images/print/print_gallery_company_brochure2.jpg",
+                    desc: "Company brochure layout - cover page."
+                },
+                {
+                    url: "images/print/print_gallery_product_circular1.jpg",
+                    desc: "Company product circular cover page layout."
+                },
+                {
+                    url: "images/print/print_gallery_product_circular2.jpg",
+                    desc: "Company product circular interior page samples."     
+                },
+                {
+                    url: "images/print/print_gallery_product_info_card1.jpg",
+                    desc: "Product information card for retail display."  
+                },
+                {
+                    url: "images/print/print_gallery_product_info_card2.jpg",
+                    desc: "Product information card for retail display."  
+                },
+                {
+                    url: "images/print/print_gallery_print_advertising1.jpg",
+                    desc: "Print publication advertisements for company promo."  
                 }
             ]
         },
