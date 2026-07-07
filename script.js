@@ -1,38 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ==========================================
-    // 1. PROJECT GALLERIES DATA
+    // 1. PROJECT GALLERIES DATA (Updated with Descriptions)
     // ==========================================
-    // Replace these Unsplash placeholder URLs with your production image paths
     const galleries = {
         aether: {
             title: "Aether Campaign",
             images: [
-                "images/print/print_gallery_TCC_1.jpg",
-                "images/print/print_gallery_TCC_1.jpg",
-                "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200"
+                {
+                    url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200",
+                    desc: "Primary visual identity concept exploring minimalist geometric constructs."
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=1200",
+                    desc: "Custom typography design and brand style guidelines overview."
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200",
+                    desc: "Digital outdoor advertising mockup displaying high-contrast grid systems."
+                }
             ]
         },
         nexus: {
             title: "Nexus Mobile Platform",
             images: [
-                "images/bas/BAS_hero_home.jpg",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200"
+                {
+                    url: "https://images.unsplash.com/photo-1581291518655-9523c932dedf?q=80&w=1200",
+                    desc: "User journey map and primary dark mode interface layouts."
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
+                    desc: "Design system dashboard outlining responsive component variables."
+                }
             ]
         },
         vanguard: {
             title: "Vanguard Journal",
             images: [
-                "https://images.unsplash.com/photo-1541462608141-ad4979e408c9?q=80&w=1200",
-                "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200",
-                "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200"
+                {
+                    url: "https://images.unsplash.com/photo-1541462608141-ad4979e408c9?q=80&w=1200",
+                    desc: "Editorial front cover layout emphasizing modern Swiss typography."
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200",
+                    desc: "Interior page grid setup showing mixed-media text and photo execution."
+                }
             ]
         },
         apex: {
             title: "Apex Motion Graphics",
             images: [
-                "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200",
-                "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200"
+                {
+                    url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200",
+                    desc: "Vector storyboards detailing complex keyframe transformations."
+                }
             ]
         }
     };
@@ -43,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('gallery-modal');
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-project-name');
+    const modalDesc = document.getElementById('modal-img-description'); // Added target
     const modalCounter = document.getElementById('modal-counter');
     const closeBtn = document.querySelector('.modal-close');
     const prevBtn = document.querySelector('.modal-nav.prev');
@@ -71,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
-        modalImg.src = ""; // Clear source
+        modalImg.src = ""; 
     };
 
     closeBtn.addEventListener('click', closeModal);
@@ -88,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         currentImageIndex += direction;
         
-        // Loop controls
         if (currentImageIndex >= totalImages) currentImageIndex = 0;
         if (currentImageIndex < 0) currentImageIndex = totalImages - 1;
         
@@ -101,20 +122,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update Layout Content
     function updateModalContent() {
         const gallery = galleries[currentGalleryKey];
-        modalImg.src = gallery.images[currentImageIndex];
+        const currentItem = gallery.images[currentImageIndex];
+        
+        modalImg.src = currentItem.url;
         modalTitle.textContent = gallery.title;
+        modalDesc.textContent = currentItem.desc; // Dynamic description Injection
         modalCounter.textContent = `${currentImageIndex + 1} / ${gallery.images.length}`;
     }
 
     // Keyboard Accessibility Support
     document.addEventListener('keydown', (e) => {
         if (!modal.classList.contains('active')) return;
-        
         if (e.key === "Escape") closeModal();
         if (e.key === "ArrowRight") changeSlide(1);
         if (e.key === "ArrowLeft") changeSlide(-1);
     });
-
 
     // ==========================================
     // 3. DARK / LIGHT MODE THEME TOGGLE
