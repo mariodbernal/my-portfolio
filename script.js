@@ -83,24 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         vanguard: {
-            title: "Digital & Web Graphcs",
-            images: [
-                {
-                    url: "images/digital/digital_web_site1.jpg",
-                    desc: "Custom website designed for South Side Barbers & Beauty in Omaha, Nebraska."
-                },
-                {
-                    url: "images/digital/digital_hero_promo_ad1.jpg",
-                    desc: "Mobile hero image for product sales promotion."
-                }
-            ]
-        },
-        apex: {
-            title: "More design samples",
+            title: "BRANDING & DESIGN",
             images: [
                 {
                     url: "images/misc/misc_logo_design3.jpg",
                     desc: "Custom logo illustration for a catfishing team in Omaha, NE."
+                },
+                {
+                    url: "images/misc/misc_channel_letters1.png",
+                    desc: "Channel letters set up to scale."
+                },
+                {
+                    url: "images/misc/misc_monument_sign1.png",
+                    desc: "Custom monument sign concept created for a local business."
+                },
+                {
+                    url: "images/misc/misc_logo_design3.jpg",
+                    desc: "Custom logo illustration for a catfishing team in Omaha, NE."
+                },
+                {
+                    url: "images/misc/misc_projecting_sign1.png",
+                    desc: "Projecting sign design set up to scale for a local Omaha, NE business."
                 },
                 {
                     url: "images/misc/misc_logo_design4.jpg",
@@ -117,6 +120,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     url: "images/misc/misc_custom_cooler_design2.png",
                     desc: "Can cooler mockup design."
+                }
+            ]
+        },
+        apex: {
+            title: "DIGITAL & WEB",
+            images: [
+                {
+                    url: "images/digital/digital_web_site1.jpg",
+                    desc: "Custom website designed for South Side Barbers & Beauty in Omaha, Nebraska."
+                },
+                {
+                    url: "images/digital/digital_hero_promo_ad1.jpg",
+                    desc: "Mobile hero image for product sales promotion."
                 }
             ]
         }
