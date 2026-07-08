@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "BRANDING & DESIGN",
             images: [
                 {
-                    url: "images/misc/misc_logo_design3.jpg",
-                    desc: "Custom logo illustration for a catfishing team in Omaha, NE."
+                    url: "images/print/DrakeWhite_ConcertFlyer_Public.jpg",
+                    desc: "Custom poster design for a corporate fund raising event."
                 },
                 {
                     url: "images/misc/misc_channel_letters1.png",
