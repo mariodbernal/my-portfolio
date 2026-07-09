@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     url: "images/print/DrakeWhite_ConcertFlyer_Public.jpg",
                     desc: "Custom concert poster for a company fundraiser."
                 },
+                 {
+                    url: "images/print/print_gallery_publication_section_ad4.jpg",
+                    desc: "Full page ad for a nationwide publication."
+                },
+                 {
+                    url: "images/print/print_gallery_publication_section_ad5.jpg",
+                    desc: "Full page ad for a nationwide publication."
+                },
                 {
                     url: "images/print/print_gallery_Company_vintage_poster.jpg",
                     desc: "Vintage poster created for a 20 year anniversary."
@@ -129,6 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     url: "images/digital/digital_web_site1.jpg",
                     desc: "Custom website designed for South Side Barbers & Beauty in Omaha, Nebraska."
+                },
+                {
+                    url: "images/digital/digital_hero_TCC.jpg",
+                    desc: "Hero graphic for social media platform."
                 },
                 {
                     url: "images/digital/digital_hero_promo_ad1.jpg",
