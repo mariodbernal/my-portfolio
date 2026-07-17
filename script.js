@@ -118,6 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Custom logo rebrand design for pneumatic tool line sold in over 100 retail stores in the US and Mexico."
                 },
                 {
+                    url: "images/misc/misc_logo_design4.jpg",
+                    desc: "Custom logo concept in real world application for Interchange Brands."
+                },                
+                {
                     url: "images/misc/misc_logo_design6.jpg",
                     desc: "Custom logo design for All Safe Homes, a home security company."
                 },
