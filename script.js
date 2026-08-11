@@ -94,10 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "BRANDING & DESIGN",
             images: [
                 {
-                    url: "images/print/DrakeWhite_ConcertFlyer_Public.jpg",
-                    desc: "Custom poster design for a corporate fund raising event."
-                },
-                {
                     url: "images/misc/misc_channel_letters1.png",
                     desc: "Channel letters set up to scale."
                 },
