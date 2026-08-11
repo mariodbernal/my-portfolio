@@ -235,7 +235,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 3. DARK / LIGHT MODE THEME TOGGLE
+    // 3. RESUME MODAL LOGIC
+    // ==========================================
+    const resumeModal = document.getElementById('resume-modal');
+    const openResumeBtn = document.getElementById('open-resume-btn');
+    const closeResumeBtn = document.querySelector('.resume-close-btn');
+
+    if (openResumeBtn && resumeModal) {
+        openResumeBtn.addEventListener('click', () => {
+            resumeModal.classList.add('active');
+            resumeModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        });
+
+        closeResumeBtn.addEventListener('click', () => {
+            resumeModal.classList.remove('active');
+            resumeModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        });
+
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                resumeModal.classList.remove('active');
+                resumeModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+            }
+        });
+    }
+    
+    // ==========================================
+    // 4. DARK / LIGHT MODE THEME TOGGLE
     // ==========================================
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -251,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 4. INTERSECTION OBSERVER (SCROLL REVEAL)
+    // 5. INTERSECTION OBSERVER (SCROLL REVEAL)
     // ==========================================
     const revealElements = document.querySelectorAll('.reveal');
     
@@ -274,35 +303,3 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 });
-// ==========================================
-    // 5. RESUME MODAL LOGIC
-    // ==========================================
-    const resumeModal = document.getElementById('resume-modal');
-    const openResumeBtn = document.getElementById('open-resume-btn');
-    const closeResumeBtn = document.querySelector('.resume-close-btn');
-
-    if (openResumeBtn && resumeModal) {
-        // Open Modal
-        openResumeBtn.addEventListener('click', () => {
-            resumeModal.classList.add('active');
-            resumeModal.setAttribute('aria-hidden', 'false');
-            document.body.classList.add('modal-open');
-        });
-
-        // Close Modal via button
-        closeResumeBtn.addEventListener('click', () => {
-            resumeModal.classList.remove('active');
-            resumeModal.setAttribute('aria-hidden', 'true');
-            document.body.classList.remove('modal-open');
-        });
-
-        // Close Modal via backdrop click
-        resumeModal.addEventListener('click', (e) => {
-            if (e.target === resumeModal) {
-                resumeModal.classList.remove('active');
-                resumeModal.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('modal-open');
-            }
-        });
-    }
-
