@@ -274,3 +274,35 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 });
+// ==========================================
+    // 5. RESUME MODAL LOGIC
+    // ==========================================
+    const resumeModal = document.getElementById('resume-modal');
+    const openResumeBtn = document.getElementById('open-resume-btn');
+    const closeResumeBtn = document.querySelector('.resume-close-btn');
+
+    if (openResumeBtn && resumeModal) {
+        // Open Modal
+        openResumeBtn.addEventListener('click', () => {
+            resumeModal.classList.add('active');
+            resumeModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        });
+
+        // Close Modal via button
+        closeResumeBtn.addEventListener('click', () => {
+            resumeModal.classList.remove('active');
+            resumeModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        });
+
+        // Close Modal via backdrop click
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                resumeModal.classList.remove('active');
+                resumeModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+            }
+        });
+    }
+
